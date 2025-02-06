@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(to right, #121212, #1e1e1e);
+    color: #ccc;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background: #ff9966;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+}
+
+.categories {
+    margin: 10px;
+}
+
+.category-btn {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: #ff5f6d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background: #ff9966;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.wallpaper {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.wallpaper:hover {
+    transform: scale(1.05);
+}
+
+.wallpaper img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wallpaper img:hover {
+    transform: scale(1.02);
+}
+
+.wallpaper a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #23d807;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.wallpaper a:hover {
+    background: #35f10b;
+}
+
+#loadMore {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#loadMore:hover {
+    background: #45a049;
+}
+.like-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #f60014;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+}
+
+.like-btn:hover {
+    background: #ff9966;
+}
