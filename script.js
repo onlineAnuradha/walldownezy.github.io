@@ -58,3 +58,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const likeButtons = document.querySelectorAll(".like-btn");
+
+    likeButtons.forEach(button => {
+        // Click Event: Toggle like state
+        button.addEventListener("click", () => {
+            button.classList.toggle("liked");  // Toggle the liked state
+            if (button.classList.contains("liked")) {
+                button.innerHTML = "❤️";  // Change to filled heart when liked
+            } else {
+                button.innerHTML = "🖤";  // Change back to empty heart when unliked
+            }
+        });
+
+        // On PC (Hover events)
+        if (window.innerWidth >= 768) {
+            button.addEventListener("mouseenter", () => {
+                // When mouse enters: Change heart color and zoom effect
+                if (!button.classList.contains("liked")) {
+                    button.style.color = "#ff4d4d";  // Red heart on hover
+                    button.style.transform = "scale(1.3)";  // Zoom effect
+                }
+            });
+
+            button.addEventListener("mouseleave", () => {
+                // When mouse leaves: Reset heart color and remove zoom
+                if (!button.classList.contains("liked")) {
+                    button.style.color = "#888";  // Default heart color
+                    button.style.transform = "scale(1)";  // Reset zoom effect
+                }
+            });
+        }
+    });
+});
