@@ -145,5 +145,92 @@ button:hover {
 }
 
 .like-btn:hover {
-    background: #ff9966;
+    background: #ff6666;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .wallpaper {
+        padding: 10px;
+    }
+}
+.wallpaper a {
+    display: inline-block;
+    margin-top: 5px; /* Reduce space above the button */
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font */
+}
+/* Like Button Styling */
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;  /* Heart icon size */
+    color: #888; /* Default color */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: block;
+    margin: 8px auto;
+}
+
+/* On PC, when hovered, heart zooms and color changes to red (no box around) */
+@media (min-width: 768px) {
+    .like-btn:hover {
+        color: #ff4d4d;  /* Red heart on hover */
+        transform: scale(1.3);  /* Zoom effect */
+        background: none;  /* Remove any background color */
+        box-shadow: none;  /* Ensure no shadow or box appears */
+    }
+}
+
+/* Active like state for mobile (click) */
+.like-btn.liked {
+    color: #ff4d4d;  /* Red heart */
+    transform: scale(1.3);  /* Zoom effect when clicked */
+}
+
+/* Pulse Animation on click */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1.3); }
 }
