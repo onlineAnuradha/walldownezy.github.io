@@ -38,19 +38,19 @@
 
 
     <div class="gallery">
-      <div class="wallpaper" data-category="4k">
-        <img
-          src="img/WhatsApp Image 2025-02-06 at 14.12.07_910f8526.jpg"
-          alt="Nature Wallpaper"
-        />
-        <a
-          href="img/WhatsApp Image 2025-02-06 at 14.12.07_910f8526.jpg"
-          download
-          >Download</a
-        >
-        <button class="like-btn">❤</button>
+    <?php
+    $wallpapers = glob('uploads/*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
+    foreach ($wallpapers as $wallpaper) {
+        echo "
+        <div class='wallpaper'>
+            <img src='$wallpaper' alt='Wallpaper'>
+            <a href='$wallpaper' download>Download</a>
+            <button class='like-btn'>❤</button>
+        </div>";
+    }
+    ?>
+</div>
 
-      </div>
       <div class="wallpaper" data-category="4k">
         <img
           src="img/WhatsApp Image 2025-02-06 at 14.12.08_354819d7.jpg"
