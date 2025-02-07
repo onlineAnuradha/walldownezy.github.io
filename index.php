@@ -11,3 +11,6 @@
     }
     ?>
 </div>
+<?php if (isset($_SESSION['admin_logged_in'])): ?>
+    <a href="upload.php" class="admin-upload-btn">Upload Wallpapers</a>
+<?php endif; ?>
