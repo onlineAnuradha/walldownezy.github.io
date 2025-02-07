@@ -234,3 +234,13 @@ button:hover {
     50% { transform: scale(1.5); }
     100% { transform: scale(1.3); }
 }
+/* Center the Buy Me a Coffee button in the page */
+a img {
+    display: block;
+    margin: 20px auto;  /* Centers the button */
+}
+
+/* Optionally add padding or spacing */
+header a img, main a img, aside a img {
+    margin: 15px 0;
+}
